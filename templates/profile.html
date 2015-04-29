@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+<body style="background-color:#092e20 "></body>
+    <div class="jumbotron" style="background-color: #white;">
+      <div class="container">
+        <div class='col-md-6 pull-right'>
+            <p style="font-size:42px">Welcome to your page!</p>
+            <p>Below is your very own custom URL. Remember to right it down and store it in a safe place! If you forgot your custom URL, please email gzharanczyk@gmail.com and request to have it sent to you.</p>
+            <p><a class="btn btn-success btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>      
+        <div class='col-md-6 pull-left'>
+            <p>
+                <img src="{% static 'images/django_2.png' %}" class='img-responsive' style="height:100%; width:100%" />
+            </p>
+        </div>
+      </div>
+    </div>
+    
+<div class="container">
+    
+    
+
+    
+<h3 style="background-color:#eeeeee; text-align:center; padding:50px;">Your unique URL is: <strong> http://website.com/{{ unique_id }}</strong>
+</h3>
+
+</div>
+
+{% endblock %}
+      
+    
+</body>
+

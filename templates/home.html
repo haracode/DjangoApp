@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <div class="jumbotron" style="background-color: #003627; color:white; ">
+      <div class="container">
+        <div class='col-sm-6'>
+            <p style="font-size:42px">Welcome to my Django site!</p>
+            <p>This is a sample Django web application. At this website you can create your own unique URL. This unqiue URL will be your very own webpage at my website! Scroll below and fill out the form.</p>
+            <p><a class="btn btn-success btn-lg" href="#" role="button">Click here to see the source code</a></p>
+        </div>      
+        <div class='col-sm-6'>
+            <p>
+                <img src="{% static 'images/django.png' %}" class='img-responsive' />
+            </p>
+        </div>
+      </div>
+    </div>
+
+<div class='container' style='text-align: center;'>
+   <h1>Create your custom URL!</h1>
+    <form method="POST" action=""> {% csrf_token %}
+        {{ form.as_p }}
+    <input type='submit' value='Submit' class='btn btn-default' />
+    </form>
+</div>
+{% endblock %}
+      <hr>
+
+      <footer>
+        <p>&copy; Greg Haranczyk | <a href="http://www.gharanczyk.com">gharanczyk.com</a> | haracode</p>
+      </footer>
+    </div> <!-- /container -->
+
